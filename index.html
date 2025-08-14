@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="description" content="Irvington High School Maker Club"/>
+  <title>IHS Maker Club</title>
+  <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+  <link rel="stylesheet" href="./src/style.css"/>
+  <link rel="icon" href="./favicon.ico" type="image/x-icon"/>
+</head>
+
+<body>
+  <nav>
+    <a href="./index.html" class="nav-name">IHS Maker Club</a>
+    <ul>
+      <li style="float: right;"><a href="./mainPages/contact.html">Contact Us</a></li> 
+      <li style="float: right;"><a href="./mainPages/donate.html">Education</a></li>
+      <li style="float: right;"><a href="./mainPages/events.html">Events</a></li>
+      <li style="float: right;"><a href="#">Projects</a>
+        <ul> 
+          <li><a href="./project-pages/cubesat.html">CubeSat Program</a></li>
+          <li><a href="./project-pages/3dprinting.html">3D Printing Lab</a></li>
+          <li><a href="./project-pages/rocketry.html">Rocketry Team</a></li>
+          <li><a href="./project-pages/drone.html">Drone Project</a></li>
+        </ul>
+      </li>
+      <li style="float: right;"><a href="./mainPages/sponsors.html">Sponsors</a></li>
+      <li style="float: right;"><a href="#">Profiles</a>
+        <ul> 
+          <li><a href="./profiles/srihari.html">President: Srihari Muralidharan</a></li>
+          <li><a href="./profiles/amay.html">Co-President: Amay Singhania</a></li>
+          <li><a href="./profiles/rohan.html">Vice President: Rohan Milapuram</a></li>
+          <li><a href="./profiles/katharine.html">Publicity Lead: Katharine Niu</a></li>
+          <li><a href="./profiles/yi.html">Event Coordinator: Yi Shao</a></li>
+          <li><a href="./profiles/alvin.html">Outreach Director: Alvin Lai</a></li>
+          <li><a href="./profiles/kenneth.html">Secretary: Kenneth Trinh</a></li>
+          <li><a href="./profiles/roshan.html">Treasurer: Roshan Prabu</a></li>
+        </ul>
+      </li>
+    </ul>
+  </nav>
+
+  
+
+  
+
+  <div class="hero-titleImage">
+    <div class="hero-titleImage-content">
+      <br>
+      <br>
+      <br>
+      <h1>IHS Maker Club</h1>
+      <br>
+      <br>
+      <a href="#about" class="btn">Learn More</a>
+      <br>
+      <br>
+        <a href="https://docs.google.com/forms/d/e/1FAIpQLSdxfUbSLFxzgaHUXcpMFllj5oNzZn_UHTkQsQsaUWz9_J9t-Q/viewform?usp=send_form" class="btn" target="_blank" rel="noopener">Interest Form</a>
+    </div>
+  </div>
+
+  <section class="hero-carousel">
+  <div class="carousel">
+    <button class="btn prev">&#10094;</button>
+
+    <div class="image-fader" id="imageFader">
+      <img src="images/FullSpreadEarth.jpg" class="fade-image active">
+      <img src="images/cubesat_launchpad.jpg" class="fade-image">
+      <img src="images/cubesat_inprogress.jpg" class="fade-image">
+      <img src="images/engineeringphoto1.jpg" class="fade-image">
+      <img src="images/engineeringphoto2.webp" class="fade-image">
+    </div>
+
+    <button class="btn next">&#10095;</button>
+  </div>
+</section>
+
+  <script>
+const images = document.querySelectorAll('.fade-image');
+let currentIndex = 0;
+
+function showImage(index) {
+  images.forEach((img, i) => {
+    img.classList.remove('active');
+    if (i === index) img.classList.add('active');
+  });
+}
+
+function nextImage() {
+  currentIndex = (currentIndex + 1) % images.length;
+  showImage(currentIndex);
+  resetAutoSlide();
+}
+
+function prevImage() {
+  currentIndex = (currentIndex - 1 + images.length) % images.length;
+  showImage(currentIndex);
+  resetAutoSlide();
+}
+
+document.querySelector('.next').addEventListener('click', nextImage);
+document.querySelector('.prev').addEventListener('click', prevImage);
+
+let autoSlide = setInterval(nextImage, 4000);
+
+function resetAutoSlide() {
+  clearInterval(autoSlide);
+  autoSlide = setInterval(nextImage, 4000);
+}
+  </script>
+  
+
+  
+  <section id="about" data-aos="fade-up">
+    <h2>About Us</h2>
+    <p>Our mission is to empower students through hands-on projects and innovation.</p>
+  </section>
+  
+  <section id="projects" data-aos="fade-up">
+    <h2>Our Projects</h2>
+    <div class="project-gallery">
+      <div class="project-card featured-project">
+        <div class="badge">🌟 Featured</div>
+        <img src="images/cubesat.jpg" alt="CubeSat Project">
+        <h3>CubeSat Program</h3>
+        <p>Launching our school's first CubeSat into orbit for space research and experiments.</p>
+        <a href="project-pages/cubesat.html" class="btn">Learn More</a>
+      </div>
+  
+      <div class="project-card">
+        <img src="images/3dprinter.jpg" alt="3D Printing Lab">
+        <h3>3D Printing Lab</h3>
+        <p>Prototyping custom parts for student projects and hardware builds.</p>
+        <a href="project-pages/3dprinting.html" class="btn">See Prints</a>
+      </div>
+  
+      <div class="project-card">
+        <img src="images/rocketry.jpg" alt="Rocketry Team">
+        <h3>Rocketry Team</h3>
+        <p>Competing in national rocketry challenges with custom-engineered rockets.</p>
+        <a href="project-pages/rocketry.html" class="btn">View Launches</a>
+      </div>
+
+      <div class="project-card">
+        <img src="images/comingsoon.jpg" alt="Coming Soon">
+        <h3>More Projects Coming Soon</h3>
+        <p>We're constantly creating new builds, tech hacks, and innovations. Stay tuned!</p>
+      </div>
+    </div>
+  </section>
+
+  <div class="center-text">
+    <section>
+    <h3>Our Team</h3>
+    <p><a href = profiles/srihari.html>President: Srihari Muralidharan</a></p>
+    <p><a href = profiles/amay.html>Co-President: Amay Singhania</a></p>
+    <p><a href = profiles/rohan.html>Vice President: Rohan Milapuram</a></p>
+    <p><a href = profiles/katharine.html>Publicity Lead: Katharine Niu</a></p>
+    <p><a href = profiles/yi.html>Event Coordinator: Yi Shao</a></p>
+    <p><a href = profiles/alvin.html>Outreach Director: Alvin Lai</a></p>
+    <p><a href = profiles/kenneth.html>Secretary: Kenneth Trinh</a></p>
+    <p><a href = profiles/rohan.html>Treasurer: Roshan Prabu</a></p>
+    </section>
+  </div>
+
+  <section id="events" data-aos="fade-up">
+  <h2>Upcoming Events</h2>
+  <div class="event-card">
+    <div class="event-date">Sep 30</div>
+    <div class="event-info">
+      <h3>Maker Fair 2025</h3>
+      <p>A school-wide showcase of student inventions and club projects.</p>
+    </div>
+  </div>
+
+  <div class="event-card">
+    <div class="event-date">Oct 10</div>
+    <div class="event-info">
+      <h3>3D Printing Workshop</h3>
+      <p>Learn to design and print your own custom parts and tools!</p>
+    </div>
+  </div>
+</section>
+
+   <!-- Footer -->
+  <footer>
+    <img alt = "Unable to load image" src="images/Banner.png" class="hero-image"/>
+    <br>
+    <left><p>&copy; 2025 Irvington High School Maker Club. All rights reserved.</p></left>
+    <br>
+  </footer>
+
+  <!-- Optional JavaScript -->
+  <script src="script.js"></script>
+  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
+
+<script>
+  document.querySelectorAll(".project-card .btn").forEach(button => {
+    button.addEventListener("click", function (e) {
+      const ripple = document.createElement("span");
+      ripple.classList.add("ripple");
+
+      // Set the size and position based on click location
+      const rect = this.getBoundingClientRect();
+      ripple.style.width = ripple.style.height = Math.max(rect.width, rect.height) + "px";
+      ripple.style.left = e.clientX - rect.left - (rect.width / 2) + "px";
+      ripple.style.top = e.clientY - rect.top - (rect.width / 2) + "px";
+
+      this.appendChild(ripple);
+
+      // Remove the ripple after animation
+      setTimeout(() => {
+        ripple.remove();
+      }, 600);
+    });
+  });
+</script>
+
+</body>
+</html>
