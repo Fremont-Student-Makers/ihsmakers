@@ -52,12 +52,6 @@ nav {
     color: #FF5632;
 }
 
-.nav-name img {
-    height: 40px;
-    width: auto; /* Maintain aspect ratio */
-    margin-right: 10px;
-}
-
 nav ul {
     list-style: none;
     display: flex;
