@@ -1,0 +1,101 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Team - IHS Maker Club</title>
+    <link rel="stylesheet" href="../src/style.css">
+    <style>
+        .profile-gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1.5rem;
+            margin-top: 2rem;
+            text-align: center;
+        }
+        .profile-card {
+            background-color: #fff;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            text-decoration: none;
+            color: inherit;
+            display: block;
+        }
+        .profile-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px rgba(0,0,0,0.12);
+        }
+        .profile-card h3 {
+            margin: 1rem 0 0.5rem;
+            font-size: 1.4rem;
+            color: #1e3a8a;
+        }
+        .profile-card p {
+            font-size: 1rem;
+            color: #475569;
+            padding: 0 1rem 1rem;
+            margin-bottom: 0.5rem;
+        }
+    </style>
+</head>
+<body>
+    <div id="navbar-placeholder"></div>
+
+    <section id="team">
+        <h2>Our Team</h2>
+        <div class="profile-gallery">
+            <a href="/profiles/srihari.html" class="profile-card">
+                <h3>Srihari Muralidharan</h3>
+                <p><strong>Role:</strong> President</p>
+                <p><strong>Grade:</strong> 12</p>
+            </a>
+            <a href="/profiles/amay.html" class="profile-card">
+                <h3>Amay Singhania</h3>
+                <p><strong>Role:</strong> Co-President</p>
+                <p><strong>Grade:</strong> 12</p>
+            </a>
+            <a href="/profiles/rohan.html" class="profile-card">
+                <h3>Rohan Milapuram</h3>
+                <p><strong>Role:</strong> Vice President</p>
+                <p><strong>Grade:</strong> 11</p>
+            </a>
+            <a href="/profiles/katharine.html" class="profile-card">
+                <h3>Katharine Niu</h3>
+                <p><strong>Role:</strong> Publicity Lead</p>
+                <p><strong>Grade:</strong> 11</p>
+            </a>
+            <a href="/profiles/yi.html" class="profile-card">
+                <h3>Yi Shao</h3>
+                <p><strong>Role:</strong> Event Coordinator</p>
+                <p><strong>Grade:</strong> 12</p>
+            </a>
+            <a href="/profiles/alvin.html" class="profile-card">
+                <h3>Alvin Lai</h3>
+                <p><strong>Role:</strong> Outreach Director</p>
+                <p><strong>Grade:</strong> 11</p>
+            </a>
+            <a href="/profiles/kenneth.html" class="profile-card">
+                <h3>Kenneth Trinh</h3>
+                <p><strong>Role:</strong> Secretary</p>
+                <p><strong>Grade:</strong> 11</p>
+            </a>
+            <a href="/profiles/roshan.html" class="profile-card">
+                <h3>Roshan Prabu</h3>
+                <p><strong>Role:</strong> Treasurer</p>
+                <p><strong>Grade:</strong> 11</p>
+            </a>
+        </div>
+    </section>
+
+    <script>
+      fetch('../components/navbar.html')
+        .then(response => response.text())
+        .then(data => {
+          document.getElementById('navbar-placeholder').innerHTML = data;
+        });
+    </script>
+</body>
+</html>
