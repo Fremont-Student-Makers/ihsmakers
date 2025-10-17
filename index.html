@@ -162,7 +162,7 @@ function resetAutoSlide() {
   </footer>
 
   <!-- Optional JavaScript -->
-  <script src="script.js"></script>
+  <script src="src/script.js"></script>
   <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
   <script>
     AOS.init();
@@ -190,7 +190,7 @@ function resetAutoSlide() {
   });
 </script>
 <script>
-  fetch('navbar.html')
+  fetch('components/navbar.html')
     .then(response => response.text())
     .then(data => {
       document.getElementById('navbar-placeholder').innerHTML = data;
