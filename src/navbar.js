@@ -1,7 +1,10 @@
+document.addEventListener('DOMContentLoaded', () => {
+            // Hamburger menu toggle
+            const hamburgerBtn = document.getElementById('hamburger-btn');
+            const mobileMenu = document.getElementById('mobile-menu');
 
-const hamburger = document.querySelector('.hamburger');
-const navUl = document.querySelector('nav ul');
-
-hamburger.addEventListener('click', () => {
-  navUl.classList.toggle('nav-active');
-});
+            hamburgerBtn.addEventListener('click', () => {
+                hamburgerBtn.classList.toggle('open');
+                mobileMenu.classList.toggle('hidden');
+            });
+        });
