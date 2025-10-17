@@ -13,7 +13,21 @@
 <body>
   <div id="navbar-placeholder"></div>
 
-  <div class="hero-titleImage">
+  <section class="hero">
+    <div class="hero-carousel">
+      <div class="carousel">
+        <button class="btn prev">&#10094;</button>
+        <div class="image-fader" id="imageFader">
+          <img src="images/FullSpreadEarth.jpg" class="fade-image active">
+          <img src="images/cubesat_launchpad.jpg" class="fade-image">
+          <img src="images/cubesat_inprogress.jpg" class="fade-image">
+          <img src="images/engineeringphoto1.jpg" class="fade-image">
+          <img src="images/engineeringphoto2.webp" class="fade-image">
+        </div>
+        <button class="btn next">&#10095;</button>
+      </div>
+    </div>
+
     <div class="hero-titleImage-content">
       <h1>IHS Maker Club</h1>
       <div>
@@ -21,59 +35,41 @@
           <a href="https://docs.google.com/forms/d/e/1FAIpQLSdxfUbSLFxzgaHUXcpMFllj5oNzZn_UHTkQsQsaUWz9_J9t-Q/viewform?usp=send_form" class="btn" target="_blank" rel="noopener">Interest Form</a>
       </div>
     </div>
-  </div>
-
-  <section class="hero-carousel">
-  <div class="carousel">
-    <button class="btn prev">&#10094;</button>
-
-    <div class="image-fader" id="imageFader">
-      <img src="images/FullSpreadEarth.jpg" class="fade-image active">
-      <img src="images/cubesat_launchpad.jpg" class="fade-image">
-      <img src="images/cubesat_inprogress.jpg" class="fade-image">
-      <img src="images/engineeringphoto1.jpg" class="fade-image">
-      <img src="images/engineeringphoto2.webp" class="fade-image">
-    </div>
-
-    <button class="btn next">&#10095;</button>
-  </div>
-</section>
+  </section>
 
   <script>
-const images = document.querySelectorAll('.fade-image');
-let currentIndex = 0;
+    const images = document.querySelectorAll('.fade-image');
+    let currentIndex = 0;
 
-function showImage(index) {
-  images.forEach((img, i) => {
-    img.classList.remove('active');
-    if (i === index) img.classList.add('active');
-  });
-}
+    function showImage(index) {
+      images.forEach((img, i) => {
+        img.classList.remove('active');
+        if (i === index) img.classList.add('active');
+      });
+    }
 
-function nextImage() {
-  currentIndex = (currentIndex + 1) % images.length;
-  showImage(currentIndex);
-  resetAutoSlide();
-}
+    function nextImage() {
+      currentIndex = (currentIndex + 1) % images.length;
+      showImage(currentIndex);
+      resetAutoSlide();
+    }
 
-function prevImage() {
-  currentIndex = (currentIndex - 1 + images.length) % images.length;
-  showImage(currentIndex);
-  resetAutoSlide();
-}
+    function prevImage() {
+      currentIndex = (currentIndex - 1 + images.length) % images.length;
+      showImage(currentIndex);
+      resetAutoSlide();
+    }
 
-document.querySelector('.next').addEventListener('click', nextImage);
-document.querySelector('.prev').addEventListener('click', prevImage);
+    document.querySelector('.next').addEventListener('click', nextImage);
+    document.querySelector('.prev').addEventListener('click', prevImage);
 
-let autoSlide = setInterval(nextImage, 4000);
+    let autoSlide = setInterval(nextImage, 4000);
 
-function resetAutoSlide() {
-  clearInterval(autoSlide);
-  autoSlide = setInterval(nextImage, 4000);
-}
+    function resetAutoSlide() {
+      clearInterval(autoSlide);
+      autoSlide = setInterval(nextImage, 4000);
+    }
   </script>
-  
-
   
   <section id="about" data-aos="fade-up">
     <h2>About Us</h2>

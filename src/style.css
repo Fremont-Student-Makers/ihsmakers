@@ -152,42 +152,24 @@ nav ul li ul li a {
 }
 
 /* Hero Section */
-.hero-titleImage {
-    background-image: url("../images/white.jpg");
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    margin: 0;
-    width: 100%;
+.hero {
+    position: relative;
     height: calc(100vh - 70px);
-    text-align: center;
     display: flex;
     align-items: center;
     justify-content: center;
+    text-align: center;
+    margin-top: -70px; /* Overlap navbar space */
 }
 
-.hero-titleImage-content {
-    color: #fff;
-    text-shadow: 0 2px 5px rgba(0,0,0,0.7);
-    z-index: 10;
-}
-
-.hero-titleImage-content h1 {
-    font-size: 4rem;
-    font-weight: 700;
-    margin-bottom: 1rem;
-    color: #fff;
-    text-shadow: 0 3px 6px rgba(0,0,0,0.6);
-}
-
-/* Hero Carousel */
 .hero-carousel {
-    position: relative;
-    width: 100vw;
-    height: 100vh;
-    overflow: hidden;
-    margin-top: -70px; /* Overlap with the navbar space */
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
     z-index: 1;
+    overflow: hidden;
 }
 
 .carousel {
@@ -199,7 +181,6 @@ nav ul li ul li a {
 .image-fader {
   width: 100%;
   height: 100%;
-  position: relative;
 }
 
 .fade-image {
@@ -215,6 +196,21 @@ nav ul li ul li a {
 
 .fade-image.active {
   opacity: 1;
+}
+
+.hero-titleImage-content {
+    position: relative;
+    z-index: 10;
+    color: #fff;
+    text-shadow: 0 2px 5px rgba(0,0,0,0.7);
+}
+
+.hero-titleImage-content h1 {
+    font-size: 4rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    color: #fff;
+    text-shadow: 0 3px 6px rgba(0,0,0,0.6);
 }
 
 .carousel .btn {
@@ -347,5 +343,15 @@ footer img.hero-image {
 
     .hero-titleImage-content h1 {
         font-size: 2.5rem;
+    }
+
+    .hero {
+        margin-top: 0; /* Remove negative margin on mobile */
+        height: auto; /* Let content define height */
+        padding-top: 70px; /* Add padding to avoid navbar overlap */
+    }
+
+    .hero-carousel {
+        height: 50vh; /* Adjust carousel height for mobile */
     }
 }
