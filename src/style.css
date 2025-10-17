@@ -538,3 +538,39 @@ footer {
 .event-info p {
   font-size: 1rem;
 }
+
+.hamburger {
+    display: none;
+    cursor: pointer;
+}
+
+.hamburger div {
+    width: 25px;
+    height: 3px;
+    background-color: white;
+    margin: 5px 0;
+}
+
+@media screen and (max-width: 768px) {
+    nav ul {
+        position: absolute;
+        right: 0px;
+        height: 92vh;
+        top: 70px;
+        background-color: var(--nav_color);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 50%;
+        transform: translateX(100%);
+        transition: transform 0.5s ease-in;
+    }
+
+    nav ul.nav-active {
+        transform: translateX(0%);
+    }
+
+    .hamburger {
+        display: block;
+    }
+}
