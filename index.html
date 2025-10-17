@@ -185,11 +185,19 @@
     });
   });
 </script>
+
 <script>
   fetch('components/navbar.html')
     .then(response => response.text())
     .then(data => {
       document.getElementById('navbar-placeholder').innerHTML = data;
+      const hamburgerBtn = document.getElementById('hamburger-btn');
+      const mobileMenu = document.getElementById('mobile-menu');
+
+      hamburgerBtn.addEventListener('click', () => {
+        hamburgerBtn.classList.toggle('open');
+        mobileMenu.classList.toggle('active');
+      });
     });
 </script>
 
