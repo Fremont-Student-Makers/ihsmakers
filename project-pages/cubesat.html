@@ -11,7 +11,7 @@
 </head>
 
 <body>
-  <script src="../components/navbar.js"></script>
+  <div id="navbar-placeholder"></div>
 
 
   <section id="about" data-aos="fade-up">
@@ -69,6 +69,13 @@
   <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
   <script>
     AOS.init();
+</script>
+<script>
+  fetch('../components/navbar.html')
+    .then(response => response.text())
+    .then(data => {
+      document.getElementById('navbar-placeholder').innerHTML = data;
+    });
 </script>
 
 </body>
