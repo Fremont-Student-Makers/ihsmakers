@@ -24,7 +24,7 @@ img {
 }
 
 .hidden {
-    display: none;
+    display: none !important;
 }
 
 /* Navigation */
@@ -57,13 +57,11 @@ nav {
 
 nav ul {
     list-style: none;
-    display: flex;
     align-items: center;
 }
 
 nav ul li {
     position: relative;
-    margin-left: 10px;
 }
 
 nav ul li a {
@@ -71,7 +69,6 @@ nav ul li a {
     display: block;
     color: #fff;
     font-size: 14px;
-    padding: 22px 14px;
     text-decoration: none;
 }
 
@@ -102,6 +99,18 @@ nav ul li ul li a {
     padding: 8px 14px;
 }
 
+.desktop-menu {
+    display: flex;
+}
+
+.desktop-menu li {
+    margin-left: 10px;
+}
+
+.desktop-menu li a {
+    padding: 22px 14px;
+}
+
 .hamburger {
     display: none;
     cursor: pointer;
@@ -115,10 +124,32 @@ nav ul li ul li a {
     transition: all 0.3s ease-in-out;
 }
 
-/* ... (rest of the styles are below) ... */
+.mobile-menu {
+    position: absolute;
+    right: 5px;
+    top: 70px;
+    background-color: var(--nav_color);
+    border-radius: 8px;
+    flex-direction: column;
+    width: 250px;
+    padding: 10px 0;
+    display: flex;
+}
 
+.mobile-menu li {
+    width: 100%;
+    text-align: center;
+}
+
+.mobile-menu li a {
+    padding: 10px 14px;
+}
 
 @media screen and (max-width: 768px) {
+    .desktop-menu {
+        display: none;
+    }
+
     .hamburger {
         display: block;
     }
@@ -131,26 +162,5 @@ nav ul li ul li a {
     }
     .hamburger.open .line:nth-child(3) {
         transform: translateY(-8px) rotate(-45deg);
-    }
-
-    #mobile-menu {
-        position: absolute;
-        right: 5px;
-        top: 75px;
-        background-color: var(--nav_color);
-        border-radius: 8px;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        width: 250px;
-        padding: 10px 0;
-    }
-
-    nav ul li {
-        margin-left: 0;
-    }
-    
-    nav ul {
-      display: none;
     }
 }
