@@ -154,7 +154,7 @@ nav ul li ul li a {
 /* Hero Section */
 .hero {
     position: relative;
-    height: calc(100vh - 70px);
+    height: 100vh;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -343,15 +343,5 @@ footer img.hero-image {
 
     .hero-titleImage-content h1 {
         font-size: 2.5rem;
-    }
-
-    .hero {
-        margin-top: 0; /* Remove negative margin on mobile */
-        height: auto; /* Let content define height */
-        padding-top: 70px; /* Add padding to avoid navbar overlap */
-    }
-
-    .hero-carousel {
-        height: 50vh; /* Adjust carousel height for mobile */
     }
 }
