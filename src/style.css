@@ -316,7 +316,7 @@ footer {
 }
 
 footer img.hero-image {
-  max-width: 500px; /* Constrain footer image size */
+  max-width: 100%; /* Constrain footer image size */
   margin-bottom: 1rem;
 }
 
