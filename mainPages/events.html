@@ -19,10 +19,11 @@
  
  
    <div class="center-text">
-     <h3>Important Dates</h3>
-     <p>Events Coming Soon!</p>
+    <h3>Important Dates</h3>
+    <div id="events-app"></div>
    </div>
-   <script src="script.js"></script>
+  <script src="../src/events.js"></script>
+  <script src="../src/script.js"></script>
   <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
   <script>
     AOS.init();
@@ -30,29 +31,38 @@
  
    <div class="center-text">
      <h3>Ongoing Competitions</h3>
-     <p>Invention Convention</p>
-     <p>CSLI (CubeSat Launch Initiative)</p>
-     <p>NASA Techrise</p>
-     <p>Congressional App Challenge</p>
+     <div class="competitions-list">
+       <div class="competition-item">
+         <p><strong>Invention Convention</strong></p>
+         <p class="competition-desc">📅 In House Competition: March 14, 2026</p>
+       </div>
+       <div class="competition-item">
+         <p><strong>CSLI (CubeSat Launch Initiative)</strong></p>
+       </div>
+       <div class="competition-item">
+         <p><strong>NASA Techrise</strong></p>
+       </div>
+       <div class="competition-item">
+         <p><strong>Congressional App Challenge</strong></p>
+       </div>
+     </div>
      </section>
    </div>
 
-   <!-- Footer -->
-  <footer>
-    <img alt = "Unable to load image" src="../images/Banner.png" class="hero-image"/>
-    <br>
-    <left><p>&copy; 2025 Irvington High School Maker Club. All rights reserved.</p></left>
-    <br>
-  </footer>
-
-  <!-- Optional JavaScript -->
-  <script src="script.js"></script>
 <script>
   fetch('../components/navbar.html')
     .then(response => response.text())
     .then(data => {
       document.getElementById('navbar-placeholder').innerHTML = data;
     });
+</script>
+
+<div id="footer-placeholder"></div>
+
+<script>
+  fetch('../components/footer.html')
+    .then(r => r.text())
+    .then(html => document.getElementById('footer-placeholder').innerHTML = html);
 </script>
 
 </body>

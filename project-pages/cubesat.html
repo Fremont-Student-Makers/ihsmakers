@@ -19,34 +19,68 @@
     <br>
     <br>
     <br>
-    <h1>CubeSat Program</h1>
+    <h1>🛰️ CubeSat Program</h1>
 
   <div class="center-text">
-    <h2>About the Project</h2>
-    <p>Our CubeSat program is dedicated to launching Irvington High's first successful satellite into orbit.</p>
-    <p>Students will design, build, and test a fully operational CubeSat capable of gathering scientific data from space.</p>
-    <p>Our program aims to give highschool students a chance to participate in a project that allows them to partake in a real-world application of their engineering skills.</p>
-    <p>Through this project, we hope to provide an environment that encourages growth of skills vital for future career settings.</p>
+    <h2>Purpose</h2>
+    <p>Our CubeSat program is dedicated to launching Irvington High's first successful satellite into orbit, providing students with hands-on experience in aerospace engineering and satellite technology.</p>
     </div>
   </section>
   
-  <section id="projects" data-aos="fade-up">
-    <h2>Objectives</h2>
-    <ul>
-      <li>Design a 1U CubeSat frame and payload.</li>
-      <li>Collaborate with aerospace partners for launch opportunities.</li>
-      <li>Gather data on atmospheric conditions and solar radiation.</li>
-    </ul>
+  <section id="description" data-aos="fade-up">
+    <h2>Description</h2>
+    <p>Students will design, build, and test a fully operational 1U CubeSat capable of gathering scientific data from space. Our program aims to give high school students a chance to participate in a real-world application of their engineering skills while collaborating with aerospace partners for launch opportunities.</p>
+    <p>Through this project, we provide an environment that encourages growth of skills vital for future career settings, including systems design, electrical engineering, software development, and project management.</p>
 
-    
+    <h3>Our Objectives</h3>
+    <ul>
+      <li>Design a 1U CubeSat frame and payload</li>
+      <li>Develop onboard systems for data collection and transmission</li>
+      <li>Collaborate with aerospace partners for launch opportunities</li>
+      <li>Gather data on atmospheric conditions and solar radiation</li>
+      <li>Document and share findings with the scientific community</li>
+    </ul>
+  </section>
+
+  <section id="milestones" data-aos="fade-up">
+    <h2>Key Milestones & Deadlines</h2>
+    <div class="milestones-grid">
+      <div class="milestone">
+        <h4>📋 Design Phase</h4>
+        <p>Complete CAD designs and system specifications</p>
+        <span class="deadline">March 2026</span>
+      </div>
+      <div class="milestone">
+        <h4>🔧 Assembly</h4>
+        <p>Build and integrate all CubeSat components</p>
+        <span class="deadline">June 2026</span>
+      </div>
+      <div class="milestone">
+        <h4>🧪 Testing</h4>
+        <p>Conduct environmental and systems testing</p>
+        <span class="deadline">August 2026</span>
+      </div>
+      <div class="milestone">
+        <h4>🚀 Launch Readiness</h4>
+        <p>Final preparations and integration with launch vehicle</p>
+        <span class="deadline">December 2026</span>
+      </div>
+    </div>
+  </section>
 
   <div class="center-text">
     <section data-aos="fade-up">
     <h2>Gallery</h2>
-    <img src="../images/cubesat.jpg" alt="CubeSat Project Image">
-    <img src="../images/print-job.jpg" alt="Print in progress">
-    <img src="../images/cubesat_inprogress.jpg" alt="CubeSat Build Process">
-    <img src="../images/cubesat_launchpad.jpg" alt="CubeSat Launch Prep">
+    <div class="project-carousel">
+      <button class="carousel-prev">&#10094;</button>
+      <div class="carousel-track">
+        <img src="../images/cubesat.jpg" alt="CubeSat Project Image">
+        <img src="../images/print-job.jpg" alt="Print in progress">
+        <img src="../images/cubesat_inprogress.jpg" alt="CubeSat Build Process">
+        <img src="../images/cubesat_launchpad.jpg" alt="CubeSat Launch Prep">
+      </div>
+      <button class="carousel-next">&#10095;</button>
+    </div>
 
   </section>
 
@@ -56,27 +90,28 @@
 
 
 
-   <!-- Footer -->
-  <footer>
-    <img alt = "Unable to load image" src="../images/Banner.png" class="hero-image"/>
-    <br>
-    <left><p>&copy; 2025 Irvington High School Maker Club. All rights reserved.</p></left>
-    <br>
-  </footer>
+  <div id="footer-placeholder"></div>
 
   <!-- Optional JavaScript -->
-  <script src="script.js"></script>
+  <script src="../src/carousel.js"></script>
+  <script src="../src/script.js"></script>
   <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
   <script>
     AOS.init();
-</script>
-<script>
-  fetch('../components/navbar.html')
-    .then(response => response.text())
-    .then(data => {
-      document.getElementById('navbar-placeholder').innerHTML = data;
-    });
-</script>
+  </script>
+  <script>
+    fetch('../components/navbar.html')
+      .then(response => response.text())
+      .then(data => {
+        document.getElementById('navbar-placeholder').innerHTML = data;
+      });
+  </script>
+
+  <script>
+    fetch('../components/footer.html')
+      .then(r => r.text())
+      .then(html => document.getElementById('footer-placeholder').innerHTML = html);
+  </script>
 
 </body>
 </html>

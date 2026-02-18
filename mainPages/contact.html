@@ -12,39 +12,32 @@
 
 <body>
   <div id="navbar-placeholder"></div>
-
-  <section id="about" data-aos="fade-up">
-    <br>
-    <br>
-    <br>
-    <br>
-    <h2>Contact Us!</h2>
-    <p>Maker Club Email: <a href="mailto:official.ihsmakerclub@gmail.com">official.ihsmakerclub@gmail.com</a></p>
-    <p>MakerSat Email: <a href="mailto:official.prometheusalpha@gmail.com">official.prometheusalpha@gmail.com</a></p>
-
-  </section>
   
-  <section id="projects" data-aos="fade-up">
-    <h2>Socials</h2>
-    <p>MakerSat Instagram: <a href="https://www.instagram.com/prometheus_alpha/">@prometheus-Alpha</a></p>
-    <p>MakerSat YouTube: <a href="https://www.youtube.com/@PrometheusAlpha-q3y">Prometheus Alpha (@PrometheusAlpha-q3y)</a></p>
-    <p>Maker Club X: <a href="https://x.com/ihsmakerclub">@ihsmakerclub</a></p>
-    <p>MakerSat X: <a href="https://x.com/prometheusA_IHS">@prometheusA_IHS</a></p>
+    <section id="contact" data-aos="fade-up">
+      <h2>Contact Us</h2>
+      <p>If you have questions or want to join, reach out via email or the form below.</p>
 
+      <div class="contact-grid">
+        <div class="contact-info">
+          <p><strong>Club Email:</strong> <a href="mailto:official.ihsmakerclub@gmail.com">official.ihsmakerclub@gmail.com</a></p>
+          <p><strong>MakerSat Email:</strong> <a href="mailto:official.prometheusalpha@gmail.com">official.prometheusalpha@gmail.com</a></p>
+          <p><strong>Follow us:</strong> <a href="https://x.com/ihsmakerclub">@ihsmakerclub</a></p>
+        </div>
 
-    
-  </section>
+        <form class="contact-form" action="https://formspree.io/f/yourform" method="POST">
+          <label>Name<input type="text" name="name" required></label>
+          <label>Email<input type="email" name="email" required></label>
+          <label>Message<textarea name="message" rows="5" required></textarea></label>
+          <button class="btn" type="submit">Send Message</button>
+        </form>
+      </div>
 
-   <!-- Footer -->
-  <footer>
-    <img alt = "Unable to load image" src="../images/Banner.png" class="hero-image"/>
-    <br>
-    <left><p>&copy; 2025 Irvington High School Maker Club. All rights reserved.</p></left>
-    <br>
-  </footer>
+    </section>
+
+    <div id="footer-placeholder"></div>
 
   <!-- Optional JavaScript -->
-  <script src="script.js"></script>
+  <script src="../src/script.js"></script>
   <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
   <script>
     AOS.init();
@@ -55,6 +48,12 @@
     .then(data => {
       document.getElementById('navbar-placeholder').innerHTML = data;
     });
+</script>
+
+<script>
+  fetch('../components/footer.html')
+    .then(r => r.text())
+    .then(html => document.getElementById('footer-placeholder').innerHTML = html);
 </script>
 
 </body>

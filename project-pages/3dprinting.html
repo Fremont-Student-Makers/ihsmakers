@@ -19,31 +19,67 @@
     <br>
     <br>
     <br>
-    <h1>3D Printing Lab</h1>
+    <h1>🖨️ 3D Printing Lab</h1>
 
   <div class="center-text">
-    <h2>About the Project</h2>
-    <p>Our 3D Printing Lab empowers students to bring their ideas to life, producing functional prototypes, custom parts, and artistic designs. From rocketry nosecones to CubeSat components, our lab is the heartbeat of our club's builds.</p>
+    <h2>Purpose</h2>
+    <p>Our 3D Printing Lab empowers students to bring their ideas to life, producing functional prototypes, custom parts, and artistic designs for various club projects.</p>
     </div>
   </section>
   
-  <section id="projects" data-aos="fade-up">
-    <h2>Objectives</h2>
-    <ul>
-      <li>Teach students 3D modeling software and slicing tools.</li>
-      <li>Produce project components for rocketry and space systems.</li>
-      <li>Encourage creative design and rapid prototyping.</li>
-    </ul>
+  <section id="description" data-aos="fade-up">
+    <h2>Description</h2>
+    <p>The 3D Printing Lab serves as the manufacturing heartbeat of our club's builds, enabling rapid prototyping and custom component creation. From rocketry nosecones to CubeSat components, students learn cutting-edge additive manufacturing techniques.</p>
+    <p>Our lab provides hands-on experience with 3D modeling software, slicing tools, printer operation, and quality control—essential skills for modern engineering and manufacturing careers.</p>
 
-    
+    <h3>Our Objectives</h3>
+    <ul>
+      <li>Teach students 3D modeling software and slicing tools</li>
+      <li>Produce project components for rocketry and space systems</li>
+      <li>Encourage creative design and rapid prototyping</li>
+      <li>Ensure quality standards and material optimization</li>
+      <li>Develop problem-solving skills in manufacturing</li>
+    </ul>
+  </section>
+
+  <section id="milestones" data-aos="fade-up">
+    <h2>Key Milestones & Deadlines</h2>
+    <div class="milestones-grid">
+      <div class="milestone">
+        <h4>📚 Training Program</h4>
+        <p>Complete 3D modeling and design training for all students</p>
+        <span class="deadline">February 2026</span>
+      </div>
+      <div class="milestone">
+        <h4>🖨️ Equipment Upgrade</h4>
+        <p>Acquire and calibrate new printer systems</p>
+        <span class="deadline">March 2026</span>
+      </div>
+      <div class="milestone">
+        <h4>⚙️ Component Production</h4>
+        <p>Manufacture parts for current projects</p>
+        <span class="deadline">Ongoing</span>
+      </div>
+      <div class="milestone">
+        <h4>🏆 Portfolio Showcase</h4>
+        <p>Display completed prints and demonstrate capabilities</p>
+        <span class="deadline">May 2026</span>
+      </div>
+    </div>
   </section>
 
   <div class="center-text">
     <section data-aos="fade-up">
     <h2>Gallery</h2>
-    <img src="../images/print-job.jpg" alt="Print in progress">
-    <img src="../images/3dprints.jpg" alt="Finished 3D Prints">
-    <img src="../images/3dprinter.jpg" alt="3D Printing Lab">
+    <div class="project-carousel">
+      <button class="carousel-prev">&#10094;</button>
+      <div class="carousel-track">
+        <img src="../images/print-job.jpg" alt="Print in progress">
+        <img src="../images/3dprints.jpg" alt="Finished 3D Prints">
+        <img src="../images/3dprinter.jpg" alt="3D Printing Lab">
+      </div>
+      <button class="carousel-next">&#10095;</button>
+    </div>
   </section>
 
     </section>
@@ -52,27 +88,28 @@
 
 
 
-   <!-- Footer -->
-  <footer>
-    <img alt = "Unable to load image" src="../images/Banner.png" class="hero-image"/>
-    <br>
-    <left><p>&copy; 2025 Irvington High School Maker Club. All rights reserved.</p></left>
-    <br>
-  </footer>
+  <div id="footer-placeholder"></div>
 
   <!-- Optional JavaScript -->
-  <script src="script.js"></script>
+  <script src="../src/carousel.js"></script>
+  <script src="../src/script.js"></script>
   <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
   <script>
     AOS.init();
-</script>
-<script>
-  fetch('../components/navbar.html')
-    .then(response => response.text())
-    .then(data => {
-      document.getElementById('navbar-placeholder').innerHTML = data;
-    });
-</script>
+  </script>
+  <script>
+    fetch('../components/navbar.html')
+      .then(response => response.text())
+      .then(data => {
+        document.getElementById('navbar-placeholder').innerHTML = data;
+      });
+  </script>
+
+  <script>
+    fetch('../components/footer.html')
+      .then(r => r.text())
+      .then(html => document.getElementById('footer-placeholder').innerHTML = html);
+  </script>
 
 </body>
 </html>

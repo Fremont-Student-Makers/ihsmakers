@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <meta name="description" content="Irvington High School Rocketry Club"/>
-  <title>IHS Maker Club</title>
+  <meta name="description" content="IHS Maker Club Sponsors and Partners"/>
+  <title>IHS Maker Club - Sponsors</title>
   <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
   <link rel="stylesheet" href="../src/style.css"/>
   <link rel="icon" href="../favicon.ico" type="image/x-icon"/>
@@ -13,44 +13,74 @@
 <body>
   <div id="navbar-placeholder"></div>
 
-
-  
-  <section id="about" data-aos="fade-up">
+  <section id="sponsors-header" data-aos="fade-up">
     <br>
     <br>
     <br>
-    <br>
-    <h2>Thank you to our Sponsors and Cooperators!</h3>
-    <p><a href="https://www.calpoly.edu/">CalPoly SLO & Pomona</a></p>
-    <p><a href="https://www.ucla.edu/">UCLA</a></p>
-    <img src="../images/EdgeFlyteLogo.jpg" alt="EdgeFlyte Logo"/>
-    <p><a href="https://edgeflyte.com/">EdgeFlyte</a></p>
-    <img src="../images/LothanSpaceLogo.webp" alt="LothanSpace Logo"/>
-    <p><a href="https://lothanspace.com/">Lothan Space</a></p>
-    
+    <h1>🤝 Our Sponsors & Partners</h1>
+    <p class="section-subtitle">Thank you to the organizations supporting the IHS Maker Club's mission!</p>
   </section>
 
-   <!-- Footer -->
-  <footer>
-    <img alt = "Unable to load image" src="../images/Banner.png" class="hero-image"/>
-    <br>
-    <left><p>&copy; 2025 Irvington High School Maker Club. All rights reserved.</p></left>
-    <br>
-  </footer>
+  <section id="sponsors-content" data-aos="fade-up">
+    <h2>Educational Partners</h2>
+    <div class="sponsors-grid">
+      <div class="sponsor-card">
+        <div class="sponsor-icon">🏫</div>
+        <h3><a href="https://www.calpoly.edu/">CalPoly SLO & Pomona</a></h3>
+        <p>Providing mentorship, engineering expertise, and collaboration opportunities for our aerospace projects.</p>
+      </div>
+      <div class="sponsor-card">
+        <div class="sponsor-icon">🎓</div>
+        <h3><a href="https://www.ucla.edu/">UCLA</a></h3>
+        <p>Supporting our students through internship programs and advanced research partnerships.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="sponsors-industry" data-aos="fade-up">
+    <h2>Industry Partners</h2>
+    <div class="sponsors-grid">
+      <div class="sponsor-card">
+        <img src="../images/EdgeFlyteLogo.jpg" alt="EdgeFlyte Logo" class="sponsor-logo"/>
+        <h3><a href="https://edgeflyte.com/">EdgeFlyte</a></h3>
+        <p>Leading provider of drone technology and FPV solutions, partnering with us on our Aether Scout project.</p>
+      </div>
+      <div class="sponsor-card">
+        <img src="../images/LothanSpaceLogo.webp" alt="LothanSpace Logo" class="sponsor-logo"/>
+        <h3><a href="https://lothanspace.com/">Lothan Space</a></h3>
+        <p>Aerospace innovators supporting our CubeSat program with technical guidance and launch opportunities.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="sponsors-cta" data-aos="fade-up">
+    <h2>Interested in Sponsoring?</h2>
+    <p>The IHS Maker Club welcomes partnerships with organizations that share our commitment to STEM education and innovation.</p>
+    <a href="/mainPages/contact.html" class="btn">Contact Us Today</a>
+  </section>
+
+  <!-- Footer -->
+  <div id="footer-placeholder"></div>
 
   <!-- Optional JavaScript -->
-  <script src="script.js"></script>
+  <script src="../src/script.js"></script>
   <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
   <script>
     AOS.init();
-</script>
-<script>
-  fetch('../components/navbar.html')
-    .then(response => response.text())
-    .then(data => {
-      document.getElementById('navbar-placeholder').innerHTML = data;
-    });
-</script>
+  </script>
+  <script>
+    fetch('../components/navbar.html')
+      .then(response => response.text())
+      .then(data => {
+        document.getElementById('navbar-placeholder').innerHTML = data;
+      });
+  </script>
+
+  <script>
+    fetch('../components/footer.html')
+      .then(r => r.text())
+      .then(html => document.getElementById('footer-placeholder').innerHTML = html);
+  </script>
 
 </body>
 </html>

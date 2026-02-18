@@ -1,0 +1,65 @@
+[
+  {
+    "name": "Srihari Muralidharan",
+    "img": "/images/Srihari1.webp",
+    "role": "President",
+    "grade": "12",
+    "bio": "Electrical Engineering Specialist"
+  },
+  {
+    "name": "Amay Singhania",
+    "img": "/images/AmayPic.png",
+    "role": "Co-President",
+    "grade": "12",
+    "bio": "Software Expertise"
+  },
+  {
+    "name": "Rohan Milapuram",
+    "img": "/images/Rohan1.webp",
+    "role": "Vice President",
+    "grade": "12",
+    "bio": "CAD Expertise"
+  },
+  {
+    "name": "Dylan Kwok",
+    "img": "/images/DylanPic.png",
+    "role": "CTO of Rocketry",
+    "grade": "11",
+    "bio": "Aerospace Engineering Specialist"
+  },
+  {
+    "name": "Yi Shao",
+    "img": "/images/Yi1.webp",
+    "role": "CTO of Makers Branch",
+    "grade": "11",
+    "bio": "CAD Expertise"
+  },
+  {
+    "name": "Alvin Lai",
+    "img": "/images/Alvin1.jpg",
+    "role": "Outreach Director",
+    "grade": "10",
+    "bio": "Software Expertise"
+  },
+  {
+    "name": "Kenneth Trinh",
+    "img": "/images/Kenneth1.webp",
+    "role": "Secretary",
+    "grade": "10",
+    "bio": "Secretary"
+  },
+  {
+    "name": "Christopher Huang",
+    "img": "/images/ChristopherPic.png",
+    "role": "Club Photographer",
+    "grade": "11",
+    "bio": "CAD + Photography Expertise"
+  },
+  {
+    "name": "Tanvi Nasika",
+    "img": "/images/TanviPic.png",
+    "role": "CTO of CubeSat Branch",
+    "grade": "10",
+    "bio": "PCB Design + Electronics"
+  }
+]

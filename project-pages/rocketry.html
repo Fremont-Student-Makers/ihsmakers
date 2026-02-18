@@ -14,27 +14,75 @@
   <div id="navbar-placeholder"></div>
   <!-- Main Content -->
   <section id="about" data-aos="fade-up">
-    <div class="container" style="padding-top: 80px;"> <!-- Optional padding to offset fixed nav -->
-      <h1>IHS Rocketry</h1>
-      <img src="../images/rocketry.jpg" alt="Rocketry Launch" class="smaller-imgs"/>
-      <br>
-      <br>
-  </section>
-  <section id="about" data-aos="fade-up">
-      <h2>Our Mission</h2>
-      <p>We aim to foster a love for aerospace innovation through hands-on experience in rocketry and physics. Members learn skills in design, physics, teamwork, and problem-solving. The IHS Rocketry Club is a passionate team of students exploring the science of aerospace engineering. We design, build, and launch model rockets as part of national competitions such as the American Rocketry Challenge (TARC).</p>
-  </section>
-  <section id="about" data-aos="fade-up">
-      <h2>Activities & Events</h2>
-      <ul>
-        <li>Rocket design and simulations using OpenRocket</li>
-        <li>Weekly build sessions and team meetings</li>
-        <li>Launch days with FAA-certified mentors</li>
-        <li>Participation in national challenges and STEM fairs</li>
-      </ul>
+    <br>
+    <br>
+    <br>
+    <br>
+    <h1>🚀 Rocketry Team</h1>
+
+  <div class="center-text">
+    <h2>Purpose</h2>
+    <p>The IHS Rocketry Team is dedicated to fostering a passion for aerospace innovation through hands-on experience in rocket design, construction, and launch operations.</p>
     </div>
   </section>
   
+  <section id="description" data-aos="fade-up">
+    <h2>Description</h2>
+    <p>Our rocketry team designs, builds, and launches model rockets as part of national competitions such as the American Rocketry Challenge (TARC). Members learn practical skills in physics, systems engineering, safety protocols, and teamwork while pursuing a passion for aerospace.</p>
+    <p>With FAA-certified mentors and professional-grade equipment, we provide students with authentic aerospace engineering experience, from theoretical design to real-world launch operations.</p>
+
+    <h3>Activities & Events</h3>
+    <ul>
+      <li>Rocket design and simulations using OpenRocket software</li>
+      <li>Weekly build sessions and team meetings</li>
+      <li>Launch days with FAA-certified mentors</li>
+      <li>Participation in national challenges and STEM competitions</li>
+      <li>Safety training and compliance certifications</li>
+    </ul>
+  </section>
+
+  <section id="milestones" data-aos="fade-up">
+    <h2>Key Milestones & Deadlines</h2>
+    <div class="milestones-grid">
+      <div class="milestone">
+        <h4>🎓 Team Formation</h4>
+        <p>Recruit and train team members</p>
+        <span class="deadline">January 2026</span>
+      </div>
+      <div class="milestone">
+        <h4>📐 Design Phase</h4>
+        <p>Complete rocket designs for TARC competition</p>
+        <span class="deadline">March 2026</span>
+      </div>
+      <div class="milestone">
+        <h4>🔨 Construction</h4>
+        <p>Build and integrate all rocket components</p>
+        <span class="deadline">May 2026</span>
+      </div>
+      <div class="milestone">
+        <h4>🚀 Launch Series</h4>
+        <p>Multiple test flights and competition launches</p>
+        <span class="deadline">June-August 2026</span>
+      </div>
+    </div>
+  </section>
+
+  <div class="center-text">
+    <section data-aos="fade-up">
+    <h2>Gallery</h2>
+    <div class="project-carousel">
+      <button class="carousel-prev">&#10094;</button>
+      <div class="carousel-track">
+        <img src="../images/rocketry.jpg" alt="Rocketry Launch">
+        <img src="../images/engineeringphoto1.jpg" alt="Rocket Build">
+        <img src="../images/cubesat_launchpad.jpg" alt="Launch Preparation">
+      </div>
+      <button class="carousel-next">&#10095;</button>
+    </div>
+  </section>
+  </div>
+  
+  <script src="../src/carousel.js"></script>
   <script src="../src/script.js"></script>
   <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
   <script>
@@ -42,12 +90,12 @@
   </script>
 
   <!-- Footer -->
-  <footer>
-    <img alt = "Unable to load image" src="../images/Banner.png" class="hero-image"/>
-    <br>
-    <left><p>&copy; 2025 Irvington High School Maker Club. All rights reserved.</p></left>
-    <br>
-  </footer>
+  <div id="footer-placeholder"></div>
+  <script>
+    fetch('../components/footer.html')
+      .then(r => r.text())
+      .then(html => document.getElementById('footer-placeholder').innerHTML = html);
+  </script>
 <script>
   fetch('../components/navbar.html')
     .then(response => response.text())

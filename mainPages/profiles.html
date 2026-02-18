@@ -13,90 +13,33 @@
  <section id="team">
       <h2>Our Team</h2>
       <div class="horizontal-scroll-container">
-        <div class="profile-gallery">
-            <div class="profile-card">
-                <img src="../images/Srihari1.webp" alt="Srihari Muralidharan">
-                <h3>Srihari Muralidharan</h3>
-                <p><strong>Role:</strong> President</p>
-                <p><strong>Grade:</strong> 12</p>
-                <p>Electrical Engineering Specialist</p>
-            </div>
-            <div class="profile-card">
-                <img src="../images/AmayPic.png" alt="Amay Singhania">
-                <h3>Amay Singhania</h3>
-                <p><strong>Role:</strong> Co-President</p>
-                <p><strong>Grade:</strong> 12</p>
-                <p>Software Expertise<p>
-            </div>
-            <div class="profile-card">
-                <img src="../images/Rohan1.webp" alt="Rohan Milapuram">
-                <h3>Rohan Milapuram</h3>
-                <p><strong>Role:</strong> Vice President</p>
-                <p><strong>Grade:</strong> 12</p>
-                <p>CAD Expertise</p>
-            </div>
-            <div class="profile-card">
-                <img src="../images/DylanPic.png" alt="Dylan Kwok">
-                <h3>Dylan Kwok</h3>
-                <p><strong>Role:</strong> CTO of Rocketry</p>
-                <p><strong>Grade:</strong> 11</p>
-                <p>Aerospace Engineering Specialist</p>
-            </div>
-            <div class="profile-card">
-                <img src="../images/Yi1.webp" alt="Yi Shao">
-                <h3>Yi Shao</h3>
-                <p><strong>Role:</strong> CTO of Makers Branch</p>
-                <p><strong>Grade:</strong> 11</p>
-                <p>CAD Expertise</p>
-            </div>
-            <div class="profile-card">
-                <img src="../images/Alvin1.jpg" alt="Alvin Lai">
-                <h3>Alvin Lai</h3>
-                <p><strong>Role:</strong> Outreach Director</p>
-                <p><strong>Grade:</strong> 10</p>
-                <p>Software Expertise</p>
-            </div>
-            <div class="profile-card">
-                <img src="../images/Kenneth1.webp" alt="Kenneth Trinh">
-                <h3>Kenneth Trinh</h3>
-                <p><strong>Role:</strong> Secretary</p>
-                <p><strong>Grade:</strong> 10</p>
-                <p>Secretary</p>
-            </div>
-            <div class="profile-card">
-                <img src="../images/ChristopherPic.png" alt="Christopher Huang">
-                <h3>Christopher Huang</h3>
-                <p><strong>Role:</strong> Club Photographer</p>
-                <p><strong>Grade:</strong> 11</p>
-                <p>CAD + Photography Expertise</p>
-            </div>
-            <div class="profile-card">
-                <img src="../images/TanviPic.png" alt="Tanvi Nasika">
-                <h3>Tanvi Nasika</h3>
-                <p><strong>Role:</strong> CTO of CubeSat Branch</p>
-                <p><strong>Grade:</strong> 10</p>
-                <p>PCB Design + Electronics</p>
-            </div>
-        </div>
+        <div class="profile-gallery"></div>
       </div>
   </section>
 
 
     
-    <script>
-      fetch('../components/navbar.html')
-        .then(response => response.text())
-        .then(data => {
-          document.getElementById('navbar-placeholder').innerHTML = data;
-          // Re-initialize the mobile menu script after loading the navbar
-           const hamburgerBtn = document.getElementById('hamburger-btn');
-           const mobileMenu = document.getElementById('mobile-menu');
+        <script src="../src/members.js"></script>
+        <script>
+            fetch('../components/navbar.html')
+                .then(response => response.text())
+                .then(data => {
+                    document.getElementById('navbar-placeholder').innerHTML = data;
+                    const hamburgerBtn = document.getElementById('hamburger-btn');
+                    const mobileMenu = document.getElementById('mobile-menu');
 
-            hamburgerBtn.addEventListener('click', () => {
-                hamburgerBtn.classList.toggle('open');
-                mobileMenu.classList.toggle('active');
-            });
-        });
-    </script>
+                     hamburgerBtn && hamburgerBtn.addEventListener('click', () => {
+                                hamburgerBtn.classList.toggle('open');
+                                mobileMenu.classList.toggle('active');
+                     });
+                });
+        </script>
+
+        <div id="footer-placeholder"></div>
+        <script>
+            fetch('../components/footer.html')
+                .then(r => r.text())
+                .then(html => document.getElementById('footer-placeholder').innerHTML = html);
+        </script>
 </body>
 </html>
