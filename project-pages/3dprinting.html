@@ -19,7 +19,7 @@
     <br>
     <br>
     <br>
-    <h1>🖨️ 3D Printing Lab</h1>
+    <h1> 3D Printing Lab</h1>
 
   <div class="center-text">
     <h2>Purpose</h2>
@@ -97,11 +97,13 @@
   <script>
     AOS.init();
   </script>
+  <script src="../src/navbar.js"></script>
   <script>
     fetch('../components/navbar.html')
       .then(response => response.text())
       .then(data => {
         document.getElementById('navbar-placeholder').innerHTML = data;
+        initializeNavbar();
       });
   </script>
 

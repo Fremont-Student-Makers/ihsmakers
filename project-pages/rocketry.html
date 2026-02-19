@@ -96,11 +96,13 @@
       .then(r => r.text())
       .then(html => document.getElementById('footer-placeholder').innerHTML = html);
   </script>
+<script src="../src/navbar.js"></script>
 <script>
   fetch('../components/navbar.html')
     .then(response => response.text())
     .then(data => {
       document.getElementById('navbar-placeholder').innerHTML = data;
+      initializeNavbar();
     });
 </script>
 </body>
